@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./home.css";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import Editor, { DiffEditor, useMonaco, loader } from "@monaco-editor/react";
 
 function App() {
+  const handleEditorChange = (value, evt) => {
+    // console.log(value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Editor
+        height="90vh"
+        defaultLanguage="javascript"
+        defaultValue="// start now"
+        theme="vs-dark"
+        onChange={handleEditorChange}
+      />
     </div>
   );
 }

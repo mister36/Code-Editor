@@ -1,0 +1,22 @@
+.App {
+  height: 100vh;
+}
+
+.Editor {
+  background-color: blue;
+  height: 100%;
+}
+
+.Results {
+  background-color: red;
+  height: 100%;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+}
+
+.textbox {
+  height: 100vh;
+}
